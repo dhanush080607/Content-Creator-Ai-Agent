@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Content Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="app">
+  <div class="card">
+
+    <div class="tabHeader">
+      <div class="tabTitle">AI Content Studio</div>
+      <div class="tabSubtitle">Generate content like ChatGPT / Gemini</div>
+    </div>
+
+    <div class="cardBody">
+      <form method="POST" class="form">
+
+        <div class="formGroup">
+          <label>Topic</label>
+          <input type="text" name="topic" required>
+        </div>
+
+        <div class="formGroup">
+          <label>Platform</label>
+          <select name="platform">
+            <option>LinkedIn</option>
+            <option>Instagram</option>
+            <option>Twitter</option>
+            <option>Blog</option>
+          </select>
+        </div>
+
+        <div class="formGroup">
+          <label>Tone</label>
+          <select name="tone">
+            <option>Professional</option>
+            <option>Casual</option>
+            <option>Fun</option>
+            <option>Any</option>
+          </select>
+        </div>
+
+        <div class="formGroup">
+          <label>Number of variations</label>
+          <input type="number" name="count" min="1" max="5" value="1">
+        </div>
+
+        <button class="gradient-btn" type="submit">Generate 🚀</button>
+      </form>
+
+    <div class="output">
+  <div class="outputHeader">Generated Output</div>
+
+  <div class="outputContent">
+    {{ output }}
+  </div>
+</div>
+  </div>
+</div>
+
+</body>
+</html>
