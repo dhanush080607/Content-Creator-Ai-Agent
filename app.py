@@ -42,7 +42,7 @@ Total Variations: {count}
 ────────────────────────────
 
 {variations}
-
+    
 Hashtags:
 #AI #ContentCreation #Flask #Python #WebDevelopment
 
